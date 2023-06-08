@@ -1,6 +1,7 @@
 import { create, update_memory, save_template, initilize } from './snippets/dioxus-interpreter-js-cf9fba3dff59a7e7/inline0.js';
 import { get_form_data } from './snippets/dioxus-web-dad4d7491730f4fe/inline0.js';
-import * as __wbg_star0 from './snippets/dioxus-interpreter-js-cf9fba3dff59a7e7/inline0.js';
+import * as __wbg_star0 from './snippets/dioxus-geolocation-example-b53f28fdbb7f9471/src/map.js';
+import * as __wbg_star1 from './snippets/dioxus-interpreter-js-cf9fba3dff59a7e7/inline0.js';
 
 let wasm;
 
@@ -981,23 +982,24 @@ imports.wbg.__wbindgen_memory = function() {
     const ret = wasm.memory;
     return addHeapObject(ret);
 };
-imports.wbg.__wbindgen_closure_wrapper296 = function(arg0, arg1, arg2) {
-    const ret = makeMutClosure(arg0, arg1, 94, __wbg_adapter_22);
+imports.wbg.__wbindgen_closure_wrapper300 = function(arg0, arg1, arg2) {
+    const ret = makeMutClosure(arg0, arg1, 93, __wbg_adapter_22);
     return addHeapObject(ret);
 };
-imports.wbg.__wbindgen_closure_wrapper297 = function(arg0, arg1, arg2) {
-    const ret = makeMutClosure(arg0, arg1, 94, __wbg_adapter_25);
+imports.wbg.__wbindgen_closure_wrapper301 = function(arg0, arg1, arg2) {
+    const ret = makeMutClosure(arg0, arg1, 93, __wbg_adapter_25);
     return addHeapObject(ret);
 };
-imports.wbg.__wbindgen_closure_wrapper342 = function(arg0, arg1, arg2) {
-    const ret = makeMutClosure(arg0, arg1, 121, __wbg_adapter_28);
+imports.wbg.__wbindgen_closure_wrapper346 = function(arg0, arg1, arg2) {
+    const ret = makeMutClosure(arg0, arg1, 120, __wbg_adapter_28);
     return addHeapObject(ret);
 };
-imports.wbg.__wbindgen_closure_wrapper449 = function(arg0, arg1, arg2) {
-    const ret = makeClosure(arg0, arg1, 153, __wbg_adapter_31);
+imports.wbg.__wbindgen_closure_wrapper453 = function(arg0, arg1, arg2) {
+    const ret = makeClosure(arg0, arg1, 152, __wbg_adapter_31);
     return addHeapObject(ret);
 };
-imports['./snippets/dioxus-interpreter-js-cf9fba3dff59a7e7/inline0.js'] = __wbg_star0;
+imports['./snippets/dioxus-geolocation-example-b53f28fdbb7f9471/src/map.js'] = __wbg_star0;
+imports['./snippets/dioxus-interpreter-js-cf9fba3dff59a7e7/inline0.js'] = __wbg_star1;
 
 return imports;
 }
@@ -1038,7 +1040,7 @@ async function __wbg_init(input) {
     if (wasm !== undefined) return wasm;
 
     if (typeof input === 'undefined') {
-        input = new URL('dioxus-geolocation-example-1d8ac820c9467b99_bg.wasm', import.meta.url);
+        input = new URL('dioxus-geolocation-example-c5d7822167ddb7c2_bg.wasm', import.meta.url);
     }
     const imports = __wbg_get_imports();
 

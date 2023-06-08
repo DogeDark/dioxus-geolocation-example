@@ -4,9 +4,11 @@ use dioxus_std::{
     library::geolocation::PowerMode,
 };
 use log::LevelFilter;
+use wasm_bindgen::prelude::*;
 
 fn main() {
     dioxus_logger::init(LevelFilter::Info).expect("failed to init logger");
+    initMap();
     dioxus_web::launch(app);
 }
 
@@ -14,21 +16,21 @@ fn app(cx: Scope) -> Element {
     hooks::init_geolocator(cx, PowerMode::High).unwrap();
     let coords = use_geolocation(cx);
 
-    let coords = match coords {
-        Ok(v) => v,
+    match coords {
+        Ok(v) => {
+            panTo(v.latitude, v.longitude);
+        },
         Err(e) => {
             let e = format!("Initializing: {:?}", e);
             return cx.render(rsx!(p { "{e}" }));
         }
     };
 
-    render! {
-        // Google maps embed
-        iframe {
-            width: "400",
-            height: "400",
-            style: "border: 1px solid black",
-            src: "https://www.google.com/maps/embed/v1/view?key=AIzaSyCQY9nlxUMP7dD-W4IUOMfOUfLxzpIjna4&center={coords.latitude},{coords.longitude}&zoom=16",
-        }
-    }
+    None
+}
+
+#[wasm_bindgen(module = "/src/map.js")]
+extern "C" {
+    pub fn initMap();
+    pub fn panTo(lat: f64, lon: f64);
 }

@@ -305,7 +305,10 @@ dependencies = [
  "dioxus-logger",
  "dioxus-std",
  "dioxus-web",
+ "js-sys",
  "log",
+ "wasm-bindgen",
+ "web-sys",
 ]
 
 [[package]]
