@@ -1,0 +1,13 @@
+[package]
+name = "dioxus-geolocation-example"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+dioxus = "0.3.2"
+dioxus-logger = "0.4.1"
+dioxus-std = { version = "0.2.1", features = ["geolocation"] }
+dioxus-web = "0.3.2"
+log = "0.4.18"
